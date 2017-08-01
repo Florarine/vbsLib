@@ -67,3 +67,24 @@ Environment.Item(name)
 Environment.Length
 Environment.Count
 Environment.Remove strName
+
+'set env = shl.Environment("System")
+sub add_folder_to_path(newfolder)
+    dim curpath, i, testfolder
+
+    curpath = ucase(trim(env.Item("PATH")))
+    do while len(curpath) > 0
+        i = instr(curpath, ";")
+        if i = 0 then
+            testfolder = curpath
+            curpath = ""
+        else
+            testfolder = trim(left(curpath, i-1))
+            curpath = trim(mid(curpath, i+1))
+        end if
+
+        if ucase(newfolder) = testfolder then exit sub
+    loop
+
+    env.Item("PATH") = env.Item("PATH") & ";" & newfolder
+end sub
