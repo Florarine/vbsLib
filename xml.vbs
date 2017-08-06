@@ -1,4 +1,3 @@
-'DOMDocument
 'attributes
 DOMDocument.async
 DOMDocument.childNodes
@@ -19,7 +18,6 @@ DOMDocument.save destination
 DOMDocument.selectNodes(expression)
 DOMDocument.selectSingleNode(expression)
 
-'IXMLDOMNode
 'attributes
 IXMLDOMNode.Attributes
 IXMLDOMNode.childNodes

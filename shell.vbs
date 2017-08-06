@@ -1,41 +1,41 @@
-'attributes
+attributes
 Shell.CurrentDirectory
 Shell.Environment[(location)]
-'   "system"
-'   "user"
-'   "process"
-'   "volatile"
+    "system"
+    "user"
+    "process"
+    "volatile"
 Shell.SpecialFolders[(folder)]
-'   "AllUsersDesktop"
-'   "AllUsersStartMenu"
-'   "AllUsersPrograms"
-'   "AllUsersStartup"
-'   "Desktop"
-'   "Favorites"
-'   "Fonts"
-'   "MyDocumentes"
-'   "NetHood"
-'   "PrintHood"
-'   "Programs"
-'   "Recent"
-'   "SentTo"
-'   "StartMenu"
-'   "Startup"
-'   "Templates"
+    "AllUsersDesktop"
+    "AllUsersStartMenu"
+    "AllUsersPrograms"
+    "AllUsersStartup"
+    "Desktop"
+    "Favorites"
+    "Fonts"
+    "MyDocumentes"
+    "NetHood"
+    "PrintHood"
+    "Programs"
+    "Recent"
+    "SentTo"
+    "StartMenu"
+    "Startup"
+    "Templates"
 
-'method
+method
 Shell.AppActivate title
 Shell.CreateShortcut(strPathname)
 Shell.Exec(strCommand)
 Shell.ExpandEnvironmentString(strString)
 Shell.LogEvent Type, Message[, Target]
-'   value   Event
-'   0       success
-'   1       error
-'   2       warning
-'   4       information
-'   8       audit success
-'   16      audit failure
+    value   Event
+    0       success
+    1       error
+    2       warning
+    4       information
+    8       audit success
+    16      audit failure
 Shell.Popup(strText, [nWait], [strTitle], [nType])
 Shell.RegDelete strName
 Shell.RegRead(strName)
@@ -68,7 +68,7 @@ Environment.Length
 Environment.Count
 Environment.Remove strName
 
-'set env = shl.Environment("System")
+set env = shl.Environment("System")
 sub add_folder_to_path(newfolder)
     dim curpath, i, testfolder
 
